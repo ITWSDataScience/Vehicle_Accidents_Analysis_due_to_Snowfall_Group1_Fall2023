@@ -79,25 +79,21 @@ if __name__ == '__main__':
 	model.compile(optimizer=tf.keras.optimizers.Adam(0.01), loss=tf.keras.losses.MeanSquaredError(), metrics=['accuracy'])
 	model.fit(X_train, y_train, epochs=lstm_epoch_num, verbose=1)
 
-	# for i in range(50):
-	# 	temp = X_test[i, :].reshape((1, sequence_len-1, 1))
-	# 	pred = model.predict(temp, verbose=1)
-	# 	print(pred[0][0], y_test[i])
+
+
 
 	temp = X_test.reshape((len(X_test), sequence_len-1, 1))
-	pred = model.predict(temp, verbose=1)
-	pred_ = []
-	for t in pred:
-		pred_.append(t[0])
-	pred_ = np.array(pred_)
-	ttestres = stats.ttest_ind(pred_, y_test)
+	pred = model.predict(temp, verbose=1).tolist()
+	for i in range(len(pred)):
+		pred[i] = int(pred[i][0])
+	pred = np.array(pred)
+	ttestres = stats.ttest_ind(pred, y_test)
 	print(ttestres)
 	psum = 0
 	perc_diff_sum = 0
 	for i in range(len(pred)):
-		pred[i][0] = int(pred[i][0])
-		psum += abs(pred[i][0] - y_test[i])
-		perc_diff_sum += abs(pred[i][0] - y_test[i]) / y_test[i]
+		psum += abs(pred[i] - y_test[i])
+		perc_diff_sum += abs(pred[i] - y_test[i]) / y_test[i]
 	mae = psum / len(X_test)
 	perc_diff_avg = perc_diff_sum / len(y_test)
 	print('train data size:', len(X_train), 'test data size:', len(X_test))
