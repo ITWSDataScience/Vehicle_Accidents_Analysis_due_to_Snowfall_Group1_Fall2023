@@ -1,0 +1,26 @@
+
+
+Detecting outliers for car accidents data using IQR method, r set to 1.5
+  25, 50, 75 quartile: 319.0 529.0 626.25
+  upper and lower fence: 1087.125 -141.875
+  1 outliers found in car accidents data
+    dates: 2014/01/21 accidents number: 1161
+
+Generating car accidents sequence data without outliers
+[[538 564 664 ... 533 524 565]
+ [564 664 432 ... 524 565 577]
+ [664 432 591 ... 565 577 603]
+ ...
+ [224 261 284 ... 291 253 253]
+ [261 284 297 ... 253 253 253]
+ [284 297 293 ... 253 253 218]]
+data matrix dimension: (4095, 11)
+
+Running naive prediction
+ 1/39 [..............................] - ETA: 3s39/39 [==============================] - 0s 1ms/step
+Ttest_indResult(statistic=-0.037230722049010734, pvalue=0.970304068674053)
+train data size: 2866 test data size: 1229
+MAE: 49.969894222945484
+test data mean: 489.0292921074044
+test data standard deviation: 170.86578211196183
+average percentage difference from actual value: 10.478738227160894 %
