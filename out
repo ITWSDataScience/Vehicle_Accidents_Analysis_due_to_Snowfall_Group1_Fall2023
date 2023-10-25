@@ -1,26 +1,65 @@
 
 
 Detecting outliers for car accidents data using IQR method, r set to 1.5
-  25, 50, 75 quartile: 319.0 529.0 626.25
-  upper and lower fence: 1087.125 -141.875
-  1 outliers found in car accidents data
+  25, 50, 75 quartile: 352.0 545.0 633.0
+  upper and lower fence: 1054.5 -69.5
+  2 outliers found in car accidents data
     dates: 2014/01/21 accidents number: 1161
+    dates: 2018/11/15 accidents number: 1065
 
 Generating car accidents sequence data without outliers
-[[538 564 664 ... 533 524 565]
- [564 664 432 ... 524 565 577]
- [664 432 591 ... 565 577 603]
+[[5.38000000e+02 5.64000000e+02 6.64000000e+02 ... 5.24000000e+02
+  0.00000000e+00 5.65000000e+02]
+ [5.64000000e+02 6.64000000e+02 4.32000000e+02 ... 5.65000000e+02
+  0.00000000e+00 5.77000000e+02]
+ [6.64000000e+02 4.32000000e+02 5.91000000e+02 ... 5.77000000e+02
+  0.00000000e+00 6.03000000e+02]
  ...
- [224 261 284 ... 291 253 253]
- [261 284 297 ... 253 253 253]
- [284 297 293 ... 253 253 218]]
-data matrix dimension: (4095, 11)
+ [2.77000000e+02 2.66000000e+02 2.68000000e+02 ... 2.21000000e+02
+  1.00306483e-01 2.03000000e+02]
+ [2.66000000e+02 2.68000000e+02 2.89000000e+02 ... 2.03000000e+02
+  1.00306483e-01 2.99000000e+02]
+ [2.68000000e+02 2.89000000e+02 3.11000000e+02 ... 2.99000000e+02
+  1.00306483e-01 2.49000000e+02]]
+data matrix dimension: (3804, 12)
 
-Running naive prediction
- 1/39 [..............................] - ETA: 3s39/39 [==============================] - 0s 1ms/step
-Ttest_indResult(statistic=-0.037230722049010734, pvalue=0.970304068674053)
-train data size: 2866 test data size: 1229
-MAE: 49.969894222945484
-test data mean: 489.0292921074044
-test data standard deviation: 170.86578211196183
-average percentage difference from actual value: 10.478738227160894 %
+
+Implementing First Step Prediction
+
+Naive Approach
+MAE: 62.62670753064797
+test data mean: 521.0026269702277
+test data standard deviation: 157.31591970315097
+average percentage difference from actual value: 12.687736784001297 %
+
+LSTM Approach
+train data size: 2662 test data size: 1142
+MAE: 52.28721541155867
+test data mean: 521.0026269702277
+test data standard deviation: 157.31591970315097
+average percentage difference from actual value: 10.813620057127464 %
+
+
+Implementing Second Step Prediction
+[[5.64000000e+02 2.21841027e-02]
+ [5.67000000e+02 0.00000000e+00]
+ [3.24000000e+02 0.00000000e+00]
+ ...
+ [5.11000000e+02 3.16457853e-01]
+ [5.29000000e+02 3.16457853e-01]
+ [6.67000000e+02 4.11188563e-01]]
+
+Multilayer Perceptron
+MAE: 51.885488488555225
+test data mean: 521.0026269702277
+test data standard deviation: 157.31591970315097
+average percentage difference from actual value: 10.527526178618318 %
+0.7912581988432794
+
+Linear Regression
+MAE: 51.93280448200846
+test data mean: 521.0026269702277
+test data standard deviation: 157.31591970315097
+average percentage difference from actual value: 10.568490434974867 %
+linear regression coef: [0.96602079 7.14373063]
+intercept: 7.286273703587597
