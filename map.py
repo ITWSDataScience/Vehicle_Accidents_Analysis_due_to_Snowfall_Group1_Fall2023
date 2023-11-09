@@ -15,7 +15,7 @@ def read_data(file_name):
             else:
                 Lat = float(row[17])
                 Lon = float(row[18])
-                if(Lat > 24.396308 and Lat < 31.000888 and Lon > -87.634896 and Lon < -79.974306):
+                if(Lat > 24.3 and Lat < 31.0 and Lon > -87.6 and Lon < -80.0):
                     coordinates.append((Lat, Lon))
     return coordinates
 
