@@ -1,34 +1,36 @@
 import folium
+import csv
 def read_data(file_name):
     """
     Reads the data from the file and returns a list of lists.
     """
-    data = []
-    with open(file_name) as f:
-        for line in f:
-            line = line.strip()
-            if line:
-                data.append(line.split(","))
-    return data
-def get_coordinates(data):
-    """
-    Returns a list of coordinates from the data.
-    """
     coordinates = []
-    for row in range(1, len(data)):
-        coordinates.append([float(data[row][0]), float(data[row][1])])
+    with open(file_name, "r") as file:
+        reader = csv.reader(file)
+        K = 0
+        for row in reader:
+            if(K == 0):
+                K = K + 1
+                continue
+            else:
+                Lat = float(row[17])
+                Lon = float(row[18])
+                if(Lat > 24.396308 and Lat < 31.000888 and Lon > -87.634896 and Lon < -79.974306):
+                    coordinates.append((Lat, Lon))
     return coordinates
 
 def show_on_map(coordinates):
     """
     Shows the coordinates on a map.
     """
-    map = folium.Map(location=[40.7128, -74.0060], zoom_start=10)
+    florida_bounding_box = [[24.396308, -87.634896], [31.000888, -79.974306]]
+    florida_center = [(florida_bounding_box[0][0] + florida_bounding_box[1][0]) / 2, 
+                  (florida_bounding_box[0][1] + florida_bounding_box[1][1]) / 2]
+    map = folium.Map(location=florida_center, zoom_start=7)
     for coordinate in coordinates:
         folium.Marker(coordinate).add_to(map)
     map.save("map.html")
 if __name__ == "__main__":
     file = "Child_Care_Centers.csv"
-    data = read_data(file)
-    coordinates = get_coordinates(data)
+    coordinates = read_data(file)
     show_on_map(coordinates)
