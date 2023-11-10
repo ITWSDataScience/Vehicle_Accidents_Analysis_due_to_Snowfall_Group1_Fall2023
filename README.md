@@ -4,3 +4,13 @@
 * Kerui Wu
   * temp & rainfall data for child care based on lat/lon
   * Intro part documentation
+* Weihao Li
+  * child care's id, lat, lon -- **finished**
+* Yanfeng Liu
+  * data cleaning
+* Tianze Chen
+  * models for ML
+* Jinhui Yu
+  * Poster design
+* Terry
+  * Data visualization
