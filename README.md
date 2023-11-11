@@ -14,3 +14,13 @@
   * Poster design
 * Terry
   * Data visualization
+
+
+## Datasets
+* Child_Care_Centers.csv
+  * Contains information on all Child Care located in Florida 
+  * Collected by Homeland Infrastructure Foundation-Level Data (HIFLD)
+* Child_Care_Centers_clean.csv
+  * A cleaned database from Child_Care_Centes.csv using childCare_clean.py containing ID, Latitude and Longitude.
+
+ 
