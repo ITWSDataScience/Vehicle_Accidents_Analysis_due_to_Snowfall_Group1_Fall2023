@@ -13,7 +13,7 @@
 * Jinhui Yu
   * Poster design
 * Terry
-  * Data visualization / part of EDA
+  * Data visualization / conclusion
 
 
 ## Datasets
