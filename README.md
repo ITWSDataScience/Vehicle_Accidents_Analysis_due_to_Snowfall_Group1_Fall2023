@@ -12,7 +12,7 @@
   * models for ML
 * Jinhui Yu
   * Poster design
-* Terry
+* Chi-Ting Lu (Terry)
   * Data visualization / conclusion
 
 
