@@ -22,5 +22,7 @@
   * Collected by Homeland Infrastructure Foundation-Level Data (HIFLD)
 * Child_Care_Centers_clean.csv
   * A cleaned database from Child_Care_Centes.csv using childCare_clean.py containing ID, Latitude and Longitude.
+* child_care_temp.csv
+  * child care's id with temperature data from 03/01/2013 - 03/01/2023
 
  
