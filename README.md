@@ -7,7 +7,9 @@
 * Weihao Li
   * child care's id, lat, lon -- **finished**
 * Yanfeng Liu
-  * data cleaning
+  * data cleaning -- **finished**
+  * Remove outlier using IQR -- **finished**
+  * EDA 
 * Tianze Chen
   * models for ML
 * Jinhui Yu
