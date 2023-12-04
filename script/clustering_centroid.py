@@ -7,6 +7,7 @@ from sklearn.metrics import silhouette_samples, silhouette_score
 def output_result(data, result, fname):
 	# output kmeans result to csv
 	coords_f = np.genfromtxt('../data/Child_Care_Centers_clean.csv', delimiter = ',', skip_header = 1)
+	coords_f = coords_f[coords_f[:, 0].argsort()]
 
 	open(fname, 'w').close()
 	outfile = open(fname, 'a')
@@ -43,7 +44,7 @@ def cluster_stats(data, result, cluster_num):
 
 
 if __name__ == '__main__':
-	data = np.genfromtxt('../data/training_data.csv', delimiter = ',', skip_header = 1)
+	data = np.genfromtxt('../data/clean_iqr.csv', delimiter = ',', skip_header = 1)
 	train_data = data[:, 1:]
 	
 	# predefined number of clusters
