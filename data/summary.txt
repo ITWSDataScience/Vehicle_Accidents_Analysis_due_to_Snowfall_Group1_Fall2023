@@ -1,0 +1,14 @@
+  Rainfall_Q1      Rainfall_Q2     Rainfall_Q3      Rainfall_Q4    
+ Min.   : 56.38   Min.   :146.4   Min.   : 73.31   Min.   : 31.27  
+ 1st Qu.: 66.42   1st Qu.:193.0   1st Qu.: 99.95   1st Qu.: 54.88  
+ Median : 78.09   Median :198.7   Median :107.51   Median : 58.14  
+ Mean   : 78.98   Mean   :203.6   Mean   :114.68   Mean   : 61.12  
+ 3rd Qu.: 89.96   3rd Qu.:223.9   3rd Qu.:119.22   3rd Qu.: 61.24  
+ Max.   :122.24   Max.   :242.2   Max.   :159.66   Max.   :147.09  
+ Temperature_Q1  Temperature_Q2  Temperature_Q3  Temperature_Q4 
+ Min.   :23.14   Min.   :27.44   Min.   :23.26   Min.   :14.91  
+ 1st Qu.:28.62   1st Qu.:30.80   1st Qu.:26.69   1st Qu.:19.98  
+ Median :30.52   Median :31.96   Median :27.98   Median :22.70  
+ Mean   :30.24   Mean   :32.34   Mean   :28.15   Mean   :22.35  
+ 3rd Qu.:32.07   3rd Qu.:34.10   3rd Qu.:29.71   3rd Qu.:24.33  
+ Max.   :34.75   Max.   :36.14   Max.   :32.35   Max.   :27.27  
