@@ -9,7 +9,7 @@
 * Yanfeng Liu
   * data cleaning -- **finished**
   * Remove outlier using IQR -- **finished**
-  * EDA 
+  * EDA -- **finished**
 * Tianze Chen
   * models for ML
 * Jinhui Yu
