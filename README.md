@@ -15,7 +15,8 @@
 * Jinhui Yu
   * Poster design
 * Chi-Ting Lu (Terry)
-  * Data visualization / conclusion
+  * Data visualization -- **finished**
+  * conclusion
 
 
 ## Datasets
